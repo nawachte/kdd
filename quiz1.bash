@@ -1,9 +1,3 @@
 #!/bin/bash
-echo 'CSC 466 Quiz1, Nicholas Wachter'
 
-#echo 'The corpus has '
-tr ' ' '\n' < $1 | sort | uniq -c | wc -l | awk '{printf "The corpus has "$N" uniqe words and " }'
-awk '{for(i=1;i<=NF;i++) wCount[$i]++} END {for(word in wCount) if (wCount[word] == 1) print word}' $1 | wc -l | awk '{printf $N}'
-echo ' hapax legomena'
-echo 'The list of hapax legomena:'
-awk '{for(i=1;i<=NF;i++) wCount[$i]++} END {for(word in wCount) if (wCount[word] == 1) print word}' $1 | sort
+grep -c $2 *.$1 | awk '{print $1}' | tr ":" " " | awk '{print $2}' | sort -r | awk 'FNR <= 3' | awk 'BEGIN {FS="\n"; x=0} {x+=$1} END {print x}'
