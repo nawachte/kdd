@@ -1,0 +1,7 @@
+['hi,whats up', 'eggs,hi', '(something secret),hi', 'hi,test 5', 'eggs,whats up', '(something secret),whats up', 'test 5,whats up', '(something secret),eggs', 'eggs,test 5', '(something secret),test 5']
+-----------------------------------
+['eggs,hi,whats up', '(something secret),hi,whats up', 'hi,test 5,whats up', '(something secret),eggs,hi', 'eggs,hi,test 5', '(something secret),hi,test 5', '(something secret),eggs,whats up', 'eggs,test 5,whats up', '(something secret),test 5,whats up', '(something secret),eggs,test 5']
+-----------------------------------
+['(something secret),eggs,hi,whats up', 'eggs,hi,test 5,whats up', '(something secret),hi,test 5,whats up', '(something secret),eggs,hi,test 5', '(something secret),eggs,test 5,whats up']
+-----------------------------------
+['(something secret),eggs,hi,test 5,whats up']
