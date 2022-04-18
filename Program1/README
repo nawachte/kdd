@@ -1,0 +1,21 @@
+Name:
+Nicholas Wachter
+
+Data Description:
+This data set is a grocery data set. Each entry is a customer ID, the date, and a single item. For the purposes of this
+assignment I combined all of the items for a given customer ID and put that on one line so that each line is a list of
+items that one customer bought.
+
+Link:
+https://www.kaggle.com/datasets/heeraldedhia/groceries-dataset
+
+Data Interpretation:
+From this data set I learned that people buy a lot of whole milk. Whole milk was highly correlated with several other
+items in the dataset. The second most highly correlated item was was 'other vegetables'. I also found it interesting
+that many times where A was likely to occur when B was there that the reverse was also true, B was likely to occur when
+A was there.
+
+Instructions:
+Run in terminal with 'python3 apriori.py <csv file> <minsup> <minconf>'
+
+No known problems.
