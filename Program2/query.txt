@@ -1,0 +1,43 @@
+Wachter|Who teaches [Course] this quarter?|[CSSE-Faculty], [CSSE-Faculty], ...
+Wachter|Who teaches [PREFIX][Course] this quarter?|[CSSE-Faculty], [CSSE-Faculty], ...
+Wachter|Who teaches [Course] this quarter?|[STAT-Faculty], [STAT-Faculty], ...
+Wachter|Who teaches [PREFIX][Course] this quarter?|[STAT-Faculty], [STAT-Faculty], ...
+Wachter|What days does [Course] meet?|[Course] meets on [Day], [Day], ...
+Wachter|What days does [PREFIX][CourseNum] meet?|[PREFIX][CourseNum] meets on [Day], [Day], ...
+Wachter|Where does the [Course] meet?|[Course] meets at building [Building] room [Room].
+Wachter|Where does the [PREFIX][CourseNum] meet?|[PREFIX][CourseNum] meets at building [Building] room [Room].
+Wachter|Where can I find the office of [CSSE-Faculty]?|[CSSE-Faculty]'s office is in building [Building] room [Room].
+Wachter|Where can I find the office of [STAT-Faculty]?|[STAT-Faculty]'s office is in building [Building] room [Room].
+Wachter|Is [CSSE-Faculty] teaching [Course] this [Quarter]?|Yes, [CSSE-Faculty] is teaching [Course] in the [Quarter].
+Wachter|Is [CSSE-Faculty] teaching [PREFIX][CourseNum] this [Quarter]?|Yes, [CSSE-Faculty] is teaching [PREFIX][CourseNum] in the [Quarter].
+Wachter|Is [STAT-Faculty] teaching [Course] this [Quarter]?|Yes, [STAT-Faculty] is teaching [Course] in the [Quarter].
+Wachter|Is [STAT-Faculty] teaching [PREFIX][CourseNum] this [Quarter]?|Yes, [STAT-Faculty] is teaching [PREFIX][CourseNum] in the [Quarter].
+Wachter|Does [Course] conflict with [Course] in the [Quarter]?|Yes, [Course] does conflict with [Course] in the [Quarter].
+Wachter|Does [PREFIX][CourseNum] conflict with [Course] in the [Quarter]?|Yes, [PREFIX][CourseNum] does conflict with [Course] in the [Quarter].
+Wachter|Does [Course] conflict with [PREFIX][CourseNum] in the [Quarter]?|Yes, [Course] does conflict with [PREFIX][CourseNum] in the [Quarter].
+Wachter|Does [PREFIX][CourseNum] conflict with [PREFIX][CourseNum] in the [Quarter]?|Yes, [PREFIX][CourseNum] does conflict with [PREFIX][CourseNum] in the [Quarter].
+Wachter|Is [Course] offered after [Time] on [Day], [Day], ...?|Yes, [Course] is offered after [Time] on [Day], [Day], ...
+Wachter|Is [PREFIX][CourseNum] offered after [Time] on [Day], [Day], ... in [Quarter]?|Yes [PREFIX][CourseNum] is offered after [Time] on [Day], [Day], ... in [Quarter].
+Wachter|How many sections are on not waitlisted for [Course]?|2 sections have no waitlist for [Course].
+Wachter|What sections of [Course] are offered between [Time] and [Time]?|Sections [Section], [Section], ... are offered between [Time] and [Time].
+Wachter|What sections of [PREFIX][CourseNum] are offered between [Time] and [Time]?|Sections [Section], [Section], ... are offered between [Time] and [Time].
+Wachter|Is [CSSE-Faculty] a [Job-Title]?|Yes, [CSSE-Faculty] is a [Job-Title]. 
+Wachter|Is [STAT-Faculty] a [Job-Title]?|Yes, [STAT-Faculty] is a [Job-Title].
+Wachter|How many people are on the waitlist for [Course]?|[Wait] people are currently on the waitlist for [Course].
+Wachter|How many people are on the waitlist for [PREFIX][CourseNum]?|[Wait] people are currently on the waitlist for [PREFIX][CourseNum].
+Wachter|When is the [CourseType] for [Course]?|[Course] meets for [CourseType] at [Time] on [Day]
+Wachter|When is the [CourseType] for [PREFIX][CourseNum]?|[PREFIX][CourseNum] meets for [CourseType] at [Time] on [Day]
+Wachter|When was the last quarter that [Course] was offered?|[Course] was offered in [Quarter] of [Year].
+
+
+[PREFIX]: Course PREFIX like "CSSE", "STAT" or "DATA"
+[CourseNum]: Course number like "466"
+[Course]: Name of the course like "Computer Science Fundamentals"
+[CSSE-Faculty]: Name of Faculty from the Department of Computer Science and Software Engineering
+[STAT-Faculty]: Name of instructor from the CSSE department
+[Day]: A day of the week like "Monday" or "Thursday" 
+[Building]: Cal Poly building number like 14
+[Room]: Cal Poly room number like 254
+[Quarter]: Name of a Cal Poly Quarter, one of: "Winter", "Spring", "Fall", "Summer"
+[Time]: A time of the day like "4:10 PM" or "11:40 AM"
+[Section]: A 2 digit section number like "01" or "06"

@@ -1,0 +1,20 @@
+1. What courses does Andrew Kean teach this quarter?|Andrew Kean teaches ME 415, ME 302, and ME 415 this quarter.
+2. Where is Jane Kennedy's office?|Jane Kennedy's office is located in building 21 room 239.
+3. Is CSC 202 offered this quarter?|No, CSC 202 is not offered this quarter.
+4. Who is teaching ME 322 this quarter?|Eric Espinoza-Wade and Charlie Refvem are teaching ME 322 this quarter.
+5. When does ME 322 section 2 meet?|ME 322 section 2 meets Monday, Wednesday, Friday from 10:10am to 11:00am.
+6. What is the deparment head for art and design?|James Werner is the department head of Art and Design.
+7. When are Maria Pantoja's office hours?|Maria Pantoja has office hours on Wednesday from 9:00am to 11:00am and Friday from 9:00am to 10:00am.
+8. What classes are held in room 228 of Dexter?|Building 34 room 228 is used by ART 212, ART 370, COMS 218, and JOUR 218.
+9. Is building 21 room 133 available Monday before 12:00pm?|Yes, building 21 room 12:00 is availbe before 12:00pm on Mondays.
+10. Where does GRE 224 section 4 meet?|GRE 224 section 4 meets in building 26 room 211.
+11. What courses does Bo Liu teach this quarter?|Bo Liu teaches BRAE 152, BRAE 400, and BRAE 428 this quarter.
+12. Where is Sarah Alford's office located?|Sarah Alford's office is located in building 8 room 101
+13. Is BRAE 340 offered this quarter?|Yes, BRAE 340 is offered this quarter.
+14. Who is teaching Agriculteral Economics this quarter?|Lynn Hamilton and Neal MacDougall are teaching Agricultural Economics this quarter.
+15. When does Global Agricultural Marketing and Trade meet?|Global Agricultural Marketing and Trade meets Monday and Wednesday from 10:10am to 12:00pm
+16. Who is the architecture department head?|Margot McDonald is the head of Architecture.
+17. When are Foaad Khosmood's office hours?|Foaad Khosmood has office hours on Monday, Tuesday, Wednesday, and Friday from 4:10pm to 5:00pm.
+18. What classes are held in building 5 room 206?|Building 5 room 206 is used by ARCH 133 and ARCH 313.
+19. Is building 21 room 222 being used on Monday at 4:00pm?|Yes, building 21 room 222 is being used by ARCH 253 at that time.
+20. Where can I find the classroom for CM 421 section 2?|CM 421 section 2 meets at building 186 room B303.

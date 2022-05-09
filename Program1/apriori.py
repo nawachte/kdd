@@ -1,4 +1,5 @@
 import sys
+import time
 
 if len(sys.argv) != 4:
     print("Usage: apriori <CSV> <minsup> <minconf>")
@@ -98,7 +99,15 @@ def AssociationRules(F, minconf):
                 valid_rules.append(X[0]+" --> "+X[1]) #"x,y --> a,b,c"
     return valid_rules
 
-D = [x.split(',') for x in data_lines][:-1] # [[item1, item2, ...],[item4, item6, ...],...]
+# D = [x.split(',') for x in data_lines][:-1] # [[item1, item2, ...],[item4, item6, ...],...]
+D = [  ['a','b','c','d','r'],
+        ['o','c','d','e','s'],
+        ['p','d','e','c','r'],
+        ['a','q','e','d','s'],
+        ['f','k','h','e','t'],
+        ['a','l','m','d','u'],
+        ['e','f','g','h','w']
+      ]
 I = []
 for line in D:
     for item in line:
@@ -106,7 +115,10 @@ for line in D:
 I = set(I)
 minsup = float(sys.argv[2])*len(D)
 minconf = float(sys.argv[3])
+t1 = time.time()
 F = Apriori(D,I,minsup)
+t2 = time.time()
+print(t2-t1)
 rules = AssociationRules(F,minconf)
 for rule in rules:
     print(rule)

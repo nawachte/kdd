@@ -1,4 +1,5 @@
 import sys
+import time
 
 if len(sys.argv) != 4:
     print("Usage: apriori <CSV> <minsup> <minconf>")
@@ -12,20 +13,20 @@ data_lines = csv_data.split('\n')
 num_transactions = len(data_lines)
 
 
-def get_sup_table(c, D):
-    sup = {}
-    for prefix in c:
-        sup[prefix] = 0
-    for entry in D:
-        for prefix in c:
-            occurs = True
-            for item in prefix.split(','):
-                if item not in entry:
-                    occurs = False
-                    break
-            if occurs:
-                sup[prefix] += 1
-    return sup
+# def get_sup_table(c, D):
+#     sup = {}
+#     for prefix in c:
+#         sup[prefix] = 0
+#     for entry in D:
+#         for prefix in c:
+#             occurs = True
+#             for item in prefix.split(','):
+#                 if item not in entry:
+#                     occurs = False
+#                     break
+#             if occurs:
+#                 sup[prefix] += 1
+#     return sup
 #
 # def remove_duplicates(l):
 #     new_l = []
@@ -62,10 +63,38 @@ def get_sup_table(c, D):
 #             #     del c[c.index(X)]
 #         c = extend_prefix_tree(new_c)
 #     return F
+def PowerSubsets(I, k):  # I: original transaction made up of set of unique items, k: number of items in the subset
+  if k < 1 or k > len(I):
+    return []       # in this case, not enough items to make even one k subset, or k was bad
+  if k == 1:
+    return [[x] for x in list(set(I))]
+  
+  retSets = PowerSubsets(I, k-1)
+  for x in I:
+    for item in [s for s in retSets if len(s) == k-1]:
+      if x < item[0]:
+        newList = [x]
+        newList.extend(item)
+        retSets.append(newList)
+  return retSets
 
-def bruteforce(D, I, minsup):
-    F = {}
-    
+def ComputeSupport(X,D):
+  sup = 0
+  for transaction in D:
+    #if len(X) == len(set(X) & set(transaction)):  #is the length of our set X same as the length of the intersection?
+    #another perfectly legitimate way of doing this, not sure which is faster, uses Python all() function
+    #https://docs.python.org/3/library/functions.html#all
+    if all([item in transaction for item in X]):
+      sup+=1
+  return sup
+
+def BruteForce(D,I,minsup):
+  F = {}
+  for X in PowerSubsets(I,len(I)):
+    support = ComputeSupport(X,D)
+    if support >= minsup:
+      F[','.join(X)] = support
+  return F
 
 def get_sup(items, F):
     item_list = items.split(',')
@@ -113,7 +142,16 @@ def AssociationRules(F, minconf):
                 valid_rules.append(X[0]+" --> "+X[1]) #"x,y --> a,b,c"
     return valid_rules
 
-D = [x.split(',') for x in data_lines][:-1] # [[item1, item2, ...],[item4, item6, ...],...]
+# D = [x.split(',') for x in data_lines][:-1] # [[item1, item2, ...],[item4, item6, ...],...]
+D = [  ['a','b','c','d','r'],
+        ['o','c','d','e','s'],
+        ['p','d','e','c','r'],
+        ['a','q','e','d','s'],
+        ['f','k','h','e','t'],
+        ['a','l','m','d','u'],
+        ['e','f','g','h','w']
+      ]
+
 I = []
 for line in D:
     for item in line:
@@ -121,9 +159,10 @@ for line in D:
 I = set(I)
 minsup = float(sys.argv[2])*len(D)
 minconf = float(sys.argv[3])
-# F = Apriori(D,I,minsup)
-F = bruteforce(D,I,minsup)
-# print(F)
+t1 = time.time()
+F = BruteForce(D,I,minsup)
+t2 = time.time()
+print(t2-t1)
 rules = AssociationRules(F,minconf)
 for rule in rules:
     print(rule)
